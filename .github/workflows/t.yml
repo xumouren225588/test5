@@ -1,0 +1,12 @@
+name: t
+on: push
+jobs:
+  upload_manual:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: t
+        uses: actions/upload-artifact@v4
+        with:
+          name: debian-live-image
+          path: |
+            ./*.txt
